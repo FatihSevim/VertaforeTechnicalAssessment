@@ -1,79 +1,93 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Vertafore Technical Assessment
 
-# Getting Started
+[![React Native](https://img.shields.io/badge/React%20Native-0.76.2-blue)](https://reactnative.dev/)  
+A React Native application developed as part of a technical assessment for Vertafore.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## 📋 Project Overview
 
-## Step 1: Start the Metro Server
+This project implements basic state management feature. The app showcases the use of modern development practices, efficient state management, and responsive UI components.
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+## 🚀 Features
 
-To start Metro, run the following command from the _root_ of your React Native project:
+- **Navigation**: Integrated with `@react-navigation/native` for seamless screen transitions.
+- **State Management**: Leveraging Redux Toolkit and `redux-persist` for robust state handling.
+- **Storage**: Local storage functionality using `@react-native-async-storage`.
+- **Styling**: TailwindCSS for scalable and maintainable styling.
+- **Cross-Platform**: Fully compatible with Android and iOS.
 
-```bash
-# using npm
-npm start
+## 🔧 Tech Stack
 
-# OR using Yarn
-yarn start
-```
+- **Core Framework**: React Native (v0.76.2)
+- **State Management**: Redux Toolkit, Redux Persist
+- **Navigation**: React Navigation
+- **Styling**: TailwindCSS, NativeWind
+- **Dependencies**: Node.js (>=18)
 
-## Step 2: Start your Application
+## 🛠️ Installation and Setup
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+### Prerequisites
 
-### For Android
+- Node.js (v18 or higher)
+- React Native CLI
+- Android Studio and/or Xcode for emulators
 
-```bash
-# using npm
-npm run android
+### Steps
 
-# OR using Yarn
-yarn android
-```
+1. Clone the repository:
 
-### For iOS
+   ```bash
+   git clone https://github.com/FatihSevim/VertaforeTechnicalAssessment.git
+   cd VertaforeTechnicalAssessment
 
-```bash
-# using npm
-npm run ios
+   ```
 
-# OR using Yarn
-yarn ios
-```
+2. Install dependencies:
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+   ```bash
+   npm install
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+   ```
 
-## Step 3: Modifying your App
+3. Start the Metro server:
 
-Now that you have successfully run the app, let's modify it.
+   ```bash
+   npm start
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+   ```
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+4. Run the app:
 
-## Congratulations! :tada:
+- Androd:
+  ```bash
+  npx react-native run-android
+  ```
+- IOS:
+  ```bash
+  npx react-native run-ios
+  ```
 
-You've successfully run and modified your React Native App. :partying_face:
+## 📂 Project Structure
 
-### Now what?
+VertaforeTechnicalAssessment/
+├── src/
+│ ├── components/ # Reusable UI components
+│ ├── screens/ # Application screens
+│ ├── redux/ # Redux slices and store configuration
+│ ├── utils/ # Utility functions
+│ └── navigation/ # Navigation setup
+├── App.js # Root component
+├── package.json # Dependencies and scripts
+└── README.md # Project documentation
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+## ⚙️ Key Implementation Details
 
-# Troubleshooting
+- Redux State:
+  Configured slices for modular state management.
+- Persisted Storage:
+  Redux Persist ensures state remains intact across the app restarts.
+- Reusable Components:
+  Modular components for better scalability and maintainability.
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+## 📄 License
 
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+This project is licensed under the MIT License.
