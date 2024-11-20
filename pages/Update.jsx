@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {Button, TextInput, View} from 'react-native';
+import {Alert, Button, TextInput, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {setUpdateInfo, updateBook} from '../store/slices/books';
 
@@ -13,8 +13,22 @@ const Update = ({navigation}) => {
   }, []);
 
   function handleUpdate() {
-    dispatch(updateBook());
-    navigation.goBack();
+    if (
+      !books.updateInfo.name ||
+      !books.updateInfo.author ||
+      !books.updateInfo.year
+    ) {
+      Alert.alert('Please fill all the fields to continue!');
+    } else {
+      for (let i = 0; i < books.list.length; i++) {
+        if (books.list[i].name == books.updateInfo.name) {
+          Alert.alert('A book with the same name is already registered.');
+          return null;
+        }
+      }
+      dispatch(updateBook());
+      navigation.goBack();
+    }
   }
 
   return (
