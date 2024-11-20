@@ -11,7 +11,7 @@ const List = ({navigation}) => {
 
   useEffect(() => {
     dispatch(setUpdateInfo({}));
-    console.log(books.list);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   function handleUpdate(book) {
@@ -24,7 +24,6 @@ const List = ({navigation}) => {
   }
 
   function handleDelete(bookName) {
-    console.log('delete: ' + bookName);
     dispatch(deleteBook(bookName));
   }
 

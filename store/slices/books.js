@@ -14,12 +14,9 @@ export const bookSlice = createSlice({
       state.idCounter++;
     },
     setUpdateInfo: (state, action) => {
-      console.log(action.payload);
       state.updateInfo = action.payload;
     },
     updateBook: (state, action) => {
-      console.log(state.updateInfo);
-      console.log(action.payload);
       const index = state.list.findIndex(
         item => item.id == state.updateInfo.id,
       );
@@ -28,7 +25,6 @@ export const bookSlice = createSlice({
       }
     },
     deleteBook: (state, action) => {
-      console.log(action.payload);
       let index;
       for (let i = 0; i < state.list.length; i++) {
         if (state.list[i].name == action.payload) {

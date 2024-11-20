@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {Alert, Button, TextInput, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {setUpdateInfo, updateBook} from '../store/slices/books';
@@ -7,10 +7,6 @@ const Update = ({navigation}) => {
   const dispatch = useDispatch();
 
   const books = useSelector(state => state.books);
-
-  useEffect(() => {
-    console.log(books.updateInfo);
-  }, []);
 
   function handleUpdate() {
     if (
